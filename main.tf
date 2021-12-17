@@ -12,16 +12,6 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-# Create a VPC demo
-resource "aws_vpc" "example" {
-  cidr_block = "10.0.0.0/22"
-
-}
-
-resource "aws_s3_bucket" "demo_bucket" {
-	bucket = "vikas-test197654"
-}
-
 resource "aws_instance" "my_ec2" {
         ami = "ami-0b28dfc7adc325ef4"
         instance_type = "t2.micro"
