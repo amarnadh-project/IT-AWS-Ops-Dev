@@ -11,19 +11,19 @@ pipeline {
 
         stage('init') { 
             steps {
-                sh '''terraform init'''
+                sh 'terraform init'
                 
             }
         }
 
         stage('Plan') { 
             steps {
-                sh '''terraform plan'''
+                sh 'terraform plan'
     }
   }
         stage('Apply') { 
             steps {
-                sh '''terraform apply --auto-approve'''
+                sh 'terraform apply --auto-approve'
     }
   }
 
