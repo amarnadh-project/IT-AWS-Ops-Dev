@@ -15,9 +15,6 @@ provider "aws" {
 resource "aws_instance" "my_ec2" {
         ami = "ami-0b28dfc7adc325ef4"
         instance_type = "t2.micro"
-        count = 1
+        count = 2
 
-  tags = {
-    Name = "My-VM-from jenkins"
-  }
 }
